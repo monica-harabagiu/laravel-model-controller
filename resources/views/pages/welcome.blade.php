@@ -10,7 +10,20 @@
 </head>
 <body>
 
-    <h1>Ciao</h1>
+    <main class="container">
+        <div class="row py-5">
+            @foreach ($movies as $movie)
+                <div class="card" style="width: calc(100% / 5);">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $movie['title'] }}</h5>
+                        <p>{{ $movie['date'] }}</p>
+                        <p class="text-capitalize">{{ $movie['nationality'] }}</p>
+                        <p>Vote: {{ $movie['vote'] }}</p>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </main>
     
 </body>
 </html>
